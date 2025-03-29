@@ -1,0 +1,9 @@
+venv
+data/*
+!data/README.md
+!data/dataHandler.py
+logs
+hbbb_exp_erro.log
+hbbb_exp.log
+exp.sh
+ruff.toml
