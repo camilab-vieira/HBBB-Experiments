@@ -1,8 +1,11 @@
 venv
+logs
 data/*
 !data/README.md
 !data/dataHandler.py
-logs
+models/*
+!models/ModelTrainer.py
+!models/README.md
 hbbb_exp_erro.log
 hbbb_exp.log
 exp.sh

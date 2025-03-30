@@ -85,7 +85,7 @@ The `DataHandler` class automatically generates a log file in the `./logs/` dire
 - **`encoding_method`**: The encoding method to use (`LabelEncoder` or `OneHotEncoder`).
 - **`apply_normalization`**: Defines whether normalization should be applied to the data. (`true` or `false`).
 - **`normalization_method`**: The normalization method to use (`StandardScaler` or `MinMaxScaler`).
-- **`apply_Zebin_split`**: Defines whether the Zebin split should be applied, which divides the majority class into multiple parts and mixes it with the minority class.
+- **`apply_Zebin_split`**: Defines whether the Zebin split should be applied, which divides the majority class into multiple parts and replicates the minority classes.
 - **`num_splits`**: Number of parts that the majority class is divide.
 - **`apply_binary_label`**: If `true`, applies binary classification, mapping certain values as `0` or `1` (malignant vs benign).
 - **`malignant_values`**: Specifies the values considered as malignant in the dataset when using binary labeling.

@@ -11,13 +11,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 from utils import utils
 
 class DataHandler:
-    def __init__(self, config_file: str, dataset_name: str, seed: int = None):
+    def __init__(self, config_file: str, dataset_name: str, seed: int = None) -> None:
         self.config = utils.load_config(config_file, dataset_name)
         self.seed = seed if seed else int(time())
         
-        if not os.path.exists("./logs"):
-            os.makedirs("./logs")
-        self.log_file = f"./logs/{config_file.split('/')[-1].split('.')[0]}_{dataset_name}_{self.seed}_{str(int(time()))}.log"
+        os.makedirs("logs/", exist_ok=True)
+        self.log_file = f"logs/{config_file.split('/')[-1].split('.')[0]}_{dataset_name}_{self.seed}_{str(int(time()))}.log"
         logging.basicConfig(filename=self.log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
         
         self.X_df = None
@@ -27,7 +26,7 @@ class DataHandler:
         self.imputer = None
         self.label_encoder = LabelEncoder()
 
-    def read_data(self):
+    def read_data(self) -> None:
         """Read data from file(s)"""
         datasets = self.config["datasets"]
         X_list = []
@@ -75,7 +74,7 @@ class DataHandler:
 
         logging.info(f"Data reading completed. X shape: {self.X_df.shape}, y shape: {self.y_df.shape}")
 
-    def _read_file(self, path, delimiter):
+    def _read_file(self, path: str, delimiter: str) -> None:
         """Helper function to read a file based on its extension."""
         ext = os.path.splitext(path)[1].lower()
         if ext in ['.csv', '.txt']:
@@ -91,7 +90,7 @@ class DataHandler:
         else:
             raise ValueError(f"Unsupported file format: {ext}")
     
-    def treat_y_df(self):
+    def treat_y_df(self) -> None:
         self.y_df = self.y_df.squeeze()
         if self.config.get("apply_binary_label", False):
             malignant_values = self.config.get("malignant_values")
@@ -115,7 +114,7 @@ class DataHandler:
         logging.info(f"Data split. Training size: {self.X_train.shape}, Test size: {self.X_test.shape}")
     
     
-    def encode_labels(self):
+    def encode_labels(self) -> None:
         categorical_cols = self.X_train.select_dtypes(include=["object"]).columns
         method = self.config.get("encoding_method", "LabelEncoder")
         
@@ -136,7 +135,7 @@ class DataHandler:
             self.X_test.drop(columns=categorical_cols, axis=1, inplace=True)
             logging.info(f"Drop categorical columns applied. Categorical columns: {categorical_cols}")
     
-    def impute_missing(self):
+    def impute_missing(self) -> None:
         strategy = self.config.get("imputation_strategy", "constant")
         for col in self.X_train.columns:
             if self.X_train[col].isnull().any():
@@ -157,7 +156,7 @@ class DataHandler:
                 self.X_test[col].fillna(imputed_value, inplace=True)
                 logging.info(f"Imputed {missing_count} missing values in column '{col}' with value {imputed_value}")
     
-    def normalize(self):
+    def normalize(self) -> None:
         method = self.config.get("normalization_method", "StandardScaler")
         if method == "MinMaxScaler":
             self.scaler = MinMaxScaler()
@@ -168,7 +167,7 @@ class DataHandler:
         self.X_test = pd.DataFrame(self.scaler.transform(self.X_test), columns=self.X_test.columns)
         logging.info(f"Normalization applied with {method}. Shape after normalization: {self.X_train.shape}")
     
-    def zebin_split(self):
+    def zebin_split(self) -> None:
         num_splits = self.config.get("num_splits", 3)
 
         # Identify the majority class
@@ -199,7 +198,7 @@ class DataHandler:
         self.y_train = self.y_train_splits
         logging.info(f"Zebin split applied with {num_splits} subsets. Each subset includes all minority classes.")
 
-    def run(self):
+    def run(self) -> None:
         self.read_data()
         self.treat_y_df()
         self.split_data()
