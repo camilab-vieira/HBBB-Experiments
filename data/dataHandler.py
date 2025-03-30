@@ -168,6 +168,9 @@ class DataHandler:
         logging.info(f"Normalization applied with {method}. Shape after normalization: {self.X_train.shape}")
     
     def zebin_split(self) -> None:
+        self.X_train = self.X_train.reset_index(drop=True)
+        self.y_train = self.y_train.reset_index(drop=True)
+
         num_splits = self.config.get("num_splits", 3)
 
         # Identify the majority class

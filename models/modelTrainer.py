@@ -54,7 +54,7 @@ class ModelTrainer:
         os.makedirs(self.evaluation_folder_path, exist_ok=True)
         os.makedirs("logs/", exist_ok=True)
 
-        self.log_file = f"/home/CIN/cbv2/HBBB-Experiments/logs/{dataset_name}_{model_name}_{balance_strategy}_{str(int(time()))}.log"
+        self.log_file = f"logs/{dataset_name}_{model_name}_{balance_strategy}_{str(int(time()))}.log"
         logging.basicConfig(filename=self.log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')        
 
     def train_and_evaluate(self, num_rep: int = 10) -> None:
@@ -67,7 +67,7 @@ class ModelTrainer:
 
             if isinstance(X_train_balanced, list):
                 logging.info(f"Training ensemble: {self.model_name} with {self.balance_strategy}.")
-                votes = np.zeros((len(X_test), len(np.unique(y_train))), dtype=int)
+                votes = np.zeros((len(X_test[0]), len(np.unique(handler.y_df))), dtype=int)
                 for subset_idx in range(len(X_train_balanced)):
                     model = self._load_classifiers(X_train_balanced[subset_idx], y_train_balanced[subset_idx], self.model_name)
                     y_pred = model.predict(X_test)
@@ -102,7 +102,9 @@ class ModelTrainer:
 
         # Aggregate metrics across repetitions
         logging.info(f"Evaluating across repetions: {self.model_name} with {self.balance_strategy}.")
-        csv_path = os.path.join(self.evaluation_folder_path, 'Results', f'{self.model_name}_{self.balance_strategy}_metrics.csv')
+        os.makedirs(f'evaluation/{self.dataset_name}/results', exist_ok=True)
+        
+        csv_path = os.path.join('evalution',f'{self.dataset_name}','results', f'{self.balance_strategy}_{self.model_name}_metrics.csv')
         self.aggregate_metrics(csv_path, self.evaluation_folder_path)
         logging.info(f'Metrics saved: {csv_path}')
 
@@ -297,7 +299,7 @@ class ModelTrainer:
 
     def aggregate_metrics(self, csv_path: str, model_metrics_dir: str) -> None:
         """Aggregate metrics across all repetitions and save the results."""
-        metrics_list = {key: [] for key in ['Accuracy', 'Precision', 'Recall', 'F1_score', 'Roc_auc', 'G-Mean', 'MCC', 'Cohen_Kappa']}
+        metrics_list = {key: [] for key in ['Accuracy', 'Precision', 'Recall', 'F1_score', 'G-Mean', 'MCC', 'Cohen_Kappa']}
         
         for file in os.listdir(model_metrics_dir):
             if file.endswith('_metrics.csv'):
@@ -318,7 +320,7 @@ class ModelTrainer:
 
 if __name__ == "__main__":
     # datasets = [('CIC-DoHBrw-2020', './config/data_handler_zebin.conf'), ('CIC-DoHBrw-2020', './config/data_handler_HBBB.conf'), ('Debrin', './config/data_handler_HBBB.conf'), ('Debrin', './config/data_handler_zebin.conf')]
-    datasets = [('CIC-DoHBrw-2020', './config/data_handler_zebin.conf'), ('Debrin', './config/data_handler_zebin.conf')]
+    datasets = [('Drebin', './config/data_handler_zebin.conf')]
     models = ['RandomForest']
     balance_strategies = ['Zebin']
 
