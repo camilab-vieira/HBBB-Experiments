@@ -320,9 +320,9 @@ class ModelTrainer:
 
 if __name__ == "__main__":
     # datasets = [('CIC-DoHBrw-2020', './config/data_handler_zebin.conf'), ('CIC-DoHBrw-2020', './config/data_handler_HBBB.conf'), ('Debrin', './config/data_handler_HBBB.conf'), ('Debrin', './config/data_handler_zebin.conf')]
-    datasets = [('CIC-DoHBrw-2020', './config/data_handler_HBBB.conf')]
-    models = ['DecisionTree']
-    balance_strategies = ['HBBB']
+    datasets = [('Drebin', './config/data_handler_zebin.conf')]
+    models = ['RandomForest']
+    balance_strategies = ['Zebin']
 
     with ProcessPoolExecutor(max_workers= 5) as executor:
         futures = [
