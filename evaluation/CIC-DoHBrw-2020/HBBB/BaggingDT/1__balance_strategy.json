@@ -1,0 +1,511 @@
+{
+    "stats": {
+        "strategy_counts": {
+            "RandomOverSampler": 19,
+            "ADASYN": 26,
+            "RandomUnderSampler": 28,
+            "SMOTE": 26
+        },
+        "resample_percent_counts": {
+            "0.542218629878874": 1,
+            "0.7573152061131319": 1,
+            "0.7705843146157927": 1,
+            "0.7137112353301213": 1,
+            "0.5018176059914212": 1,
+            "0.7308894684060881": 1,
+            "0.89879329421829": 1,
+            "0.8087698335684106": 1,
+            "0.5806160576919712": 1,
+            "0.9780437185148887": 1,
+            "0.9318392627074955": 1,
+            "0.628900526053442": 1,
+            "0.6668914646563993": 1,
+            "0.6148722541293726": 1,
+            "0.8343458389462648": 1,
+            "0.6345150041384464": 1,
+            "0.683713204658261": 1,
+            "0.6547764241373654": 1,
+            "0.7217630411411278": 1,
+            "0.6988317851462532": 1,
+            "0.549831706722367": 1,
+            "0.9660688109101029": 1,
+            "0.534019461385391": 1,
+            "0.5344233845673108": 1,
+            "0.8603081169919895": 1,
+            "0.604278179271809": 1,
+            "0.7597133910628735": 1,
+            "0.8027791879279529": 1,
+            "0.5994928315851211": 1,
+            "0.5211658458681814": 1,
+            "0.698853916190779": 1,
+            "0.926733955916106": 1,
+            "0.9855211925918055": 1,
+            "0.8497550663389243": 1,
+            "0.8759372179991407": 1,
+            "0.7237574395494363": 1,
+            "0.6098753814475409": 1,
+            "0.9031087344074318": 1,
+            "0.9667485392064419": 1,
+            "0.5947522353163643": 1,
+            "0.9915700850635016": 1,
+            "0.7278475417260395": 1,
+            "0.7047297628762406": 1,
+            "0.8253869105245705": 1,
+            "0.8853082096509161": 1,
+            "0.5522241497395888": 1,
+            "0.6021314890075208": 1,
+            "0.7927413846203251": 1,
+            "0.5008700879559184": 1,
+            "0.78011087228534": 1,
+            "0.8894644599345345": 1,
+            "0.8429536495420396": 1,
+            "0.7416787064264322": 1,
+            "0.8681969767920259": 1,
+            "0.6311636568106644": 1,
+            "0.653376945546075": 1,
+            "0.6904700584114177": 1,
+            "0.7926098720446921": 1,
+            "0.5903536108084522": 1,
+            "0.8340757399584582": 1,
+            "0.8314630356461368": 1,
+            "0.9895632243977451": 1,
+            "0.9106638557991042": 1,
+            "0.528756588083487": 1,
+            "0.6876311883503519": 1,
+            "0.7643495078622338": 1,
+            "0.6135016070917054": 1,
+            "0.5626789489952649": 1,
+            "0.953566328915412": 1,
+            "0.5276381540576077": 1,
+            "0.6538148579751937": 1,
+            "0.9820381806701867": 1,
+            "0.9734225261596664": 1,
+            "0.906116277299265": 1,
+            "0.8365671607949856": 1,
+            "0.9611195820811007": 1,
+            "0.7260950403356572": 1,
+            "0.8716784816740417": 1,
+            "0.5891055620570071": 1,
+            "0.9280168513450062": 1,
+            "0.9044690950864926": 1,
+            "0.9911907897308352": 1,
+            "0.9271750496187163": 1,
+            "0.9233727835420584": 1,
+            "0.715418530525258": 1,
+            "0.5628226156231675": 1,
+            "0.7697982668839007": 1,
+            "0.9136542593329735": 1,
+            "0.9447671738459813": 1,
+            "0.6605814797081163": 1,
+            "0.966058367352779": 1,
+            "0.7262294458187336": 1,
+            "0.5938313160849851": 1,
+            "0.7195852254807937": 1,
+            "0.5644680491943098": 1,
+            "0.9064134218710961": 1,
+            "0.5179862669068325": 1,
+            "0.8188761781796666": 1,
+            "0.7551518478199315": 1
+        }
+    },
+    "0": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.542218629878874
+    },
+    "1": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.7573152061131319
+    },
+    "2": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7705843146157927
+    },
+    "3": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7137112353301213
+    },
+    "4": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.5018176059914212
+    },
+    "5": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.7308894684060881
+    },
+    "6": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.89879329421829
+    },
+    "7": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.8087698335684106
+    },
+    "8": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.5806160576919712
+    },
+    "9": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.9780437185148887
+    },
+    "10": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.9318392627074955
+    },
+    "11": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.628900526053442
+    },
+    "12": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.6668914646563993
+    },
+    "13": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.6148722541293726
+    },
+    "14": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.8343458389462648
+    },
+    "15": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.6345150041384464
+    },
+    "16": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.683713204658261
+    },
+    "17": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.6547764241373654
+    },
+    "18": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7217630411411278
+    },
+    "19": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.6988317851462532
+    },
+    "20": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.549831706722367
+    },
+    "21": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.9660688109101029
+    },
+    "22": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.534019461385391
+    },
+    "23": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.5344233845673108
+    },
+    "24": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.8603081169919895
+    },
+    "25": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.604278179271809
+    },
+    "26": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7597133910628735
+    },
+    "27": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.8027791879279529
+    },
+    "28": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.5994928315851211
+    },
+    "29": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.5211658458681814
+    },
+    "30": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.698853916190779
+    },
+    "31": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.926733955916106
+    },
+    "32": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.9855211925918055
+    },
+    "33": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.8497550663389243
+    },
+    "34": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.8759372179991407
+    },
+    "35": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.7237574395494363
+    },
+    "36": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.6098753814475409
+    },
+    "37": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9031087344074318
+    },
+    "38": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.9667485392064419
+    },
+    "39": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.5947522353163643
+    },
+    "40": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9915700850635016
+    },
+    "41": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7278475417260395
+    },
+    "42": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7047297628762406
+    },
+    "43": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.8253869105245705
+    },
+    "44": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.8853082096509161
+    },
+    "45": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.5522241497395888
+    },
+    "46": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.6021314890075208
+    },
+    "47": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7927413846203251
+    },
+    "48": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.5008700879559184
+    },
+    "49": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.78011087228534
+    },
+    "50": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.8894644599345345
+    },
+    "51": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.8429536495420396
+    },
+    "52": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7416787064264322
+    },
+    "53": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.8681969767920259
+    },
+    "54": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.6311636568106644
+    },
+    "55": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.653376945546075
+    },
+    "56": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.6904700584114177
+    },
+    "57": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.7926098720446921
+    },
+    "58": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.5903536108084522
+    },
+    "59": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.8340757399584582
+    },
+    "60": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.8314630356461368
+    },
+    "61": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.9895632243977451
+    },
+    "62": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9106638557991042
+    },
+    "63": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.528756588083487
+    },
+    "64": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.6876311883503519
+    },
+    "65": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7643495078622338
+    },
+    "66": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.6135016070917054
+    },
+    "67": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.5626789489952649
+    },
+    "68": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.953566328915412
+    },
+    "69": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.5276381540576077
+    },
+    "70": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.6538148579751937
+    },
+    "71": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.9820381806701867
+    },
+    "72": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.9734225261596664
+    },
+    "73": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.906116277299265
+    },
+    "74": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.8365671607949856
+    },
+    "75": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.9611195820811007
+    },
+    "76": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7260950403356572
+    },
+    "77": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.8716784816740417
+    },
+    "78": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.5891055620570071
+    },
+    "79": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9280168513450062
+    },
+    "80": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9044690950864926
+    },
+    "81": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.9911907897308352
+    },
+    "82": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.9271750496187163
+    },
+    "83": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9233727835420584
+    },
+    "84": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.715418530525258
+    },
+    "85": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.5628226156231675
+    },
+    "86": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7697982668839007
+    },
+    "87": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9136542593329735
+    },
+    "88": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.9447671738459813
+    },
+    "89": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.6605814797081163
+    },
+    "90": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.966058367352779
+    },
+    "91": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7262294458187336
+    },
+    "92": {
+        "strategy": "RandomOverSampler",
+        "resample_percent": 0.5938313160849851
+    },
+    "93": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.7195852254807937
+    },
+    "94": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.5644680491943098
+    },
+    "95": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.9064134218710961
+    },
+    "96": {
+        "strategy": "SMOTE",
+        "resample_percent": 0.5179862669068325
+    },
+    "97": {
+        "strategy": "ADASYN",
+        "resample_percent": 0.8188761781796666
+    },
+    "98": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7551518478199315
+    },
+    "99": {
+        "strategy": "RandomUnderSampler",
+        "resample_percent": 0.7125869135808036
+    }
+}
