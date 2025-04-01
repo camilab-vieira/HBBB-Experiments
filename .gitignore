@@ -1,0 +1,13 @@
+venv
+logs
+data/*
+!data/README.md
+!data/dataHandler.py
+models/*
+!models/modelTrainer.py
+!models/README.md
+hbbb_exp_erro.log
+hbbb_exp.log
+exp.sh
+ruff.toml
+evaluation/CIC-DoHBrw-2020/results/Zebin_BaggingDT_hardness_results.json
